@@ -5,7 +5,7 @@ var app = express()
 const defaultRoute = require('../routes/default')
 
 app.use(express.json());
-app.use('/test', defaultRoute)
+app.use('/.netlify/functions/test', defaultRoute)
 
 module.exports.handler = severless(app)
 
